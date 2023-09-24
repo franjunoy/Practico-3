@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1574449959 source:c:\users\santi\desktop\fran c\practico 3\main.c
+	<stdio.h>
+	<stdlib.h>
+	"colaLista.h"
+
+1574449893 c:\users\santi\desktop\fran c\practico 3\colalista.h
+
