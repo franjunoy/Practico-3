@@ -15,3 +15,31 @@ void encola(cola **inicio, cola **fin, int elem){
     *fin=nuevo;
     }
 }
+int desencola (cola **inicio, cola **fin){
+    int valor = NULL ;
+    cola *nodoauxiliar;
+    if(estaVacia(inicio)==0){
+        return 0;
+    }
+    else if(*inicio==*fin){
+        valor=(*inicio)->dato;
+        nodoauxiliar=*inicio;
+        *inicio=NULL;
+        *fin=NULL;
+        free(nodoauxiliar);
+    }else{
+        valor=(*inicio)->dato;
+        nodoauxiliar=*inicio;
+        *inicio=(*inicio)->sgte;
+        free(nodoauxiliar);
+    }
+
+    return valor;
+}
+int estaVacia(cola **inicio){
+    if(*inicio==NULL){
+        return 0;
+    }else{
+    return 1;
+    }
+}
