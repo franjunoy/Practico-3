@@ -43,3 +43,24 @@ int estaVacia(cola **inicio){
     return 1;
     }
 }
+void vaciaCola(cola **inicio){
+    cola *nodoauxiliar=*inicio;
+    while(nodoauxiliar!=NULL){
+        *inicio=(*inicio)->sgte;
+        free(nodoauxiliar);
+        nodoauxiliar=*inicio;
+    }
+
+}
+
+int ntamao(cola *inicio){
+    int contador=0;
+    cola *nodoauxiliar=inicio;
+    while(nodoauxiliar!=NULL){
+        nodoauxiliar=nodoauxiliar->sgte;
+        contador++;
+    }
+}
+int frente(cola *inicio){
+    return inicio->dato;
+}
